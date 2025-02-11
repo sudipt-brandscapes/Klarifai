@@ -43,7 +43,7 @@ from core.models import Project
 
 
 # Configure Google Generative AI
-GOOGLE_API_KEY = "AIzaSyDEO09Xsqre5_b3wM5tSk5nagRGF5ScJAM"
+GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY")
 genai.configure(api_key=GOOGLE_API_KEY)
 # model = genai.GenerativeModel('gemini-1.5-flash')
 GENERATIVE_MODEL = genai.GenerativeModel('gemini-1.5-flash', 
